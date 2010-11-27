@@ -1,0 +1,26 @@
+<%= form_for(@entry, :url => { :action => "create" }) do |f| %>
+
+  <% if @entry.errors.any? %>
+    <div id="errorExplanation"> 
+      <h2>
+        <%= pluralize(@entry.errors.count, "error") %> :Entry can't be processed:
+      </h2>
+      <ul>
+         <% @entry.errors.full_messages.each do |msg| %> 
+          <li><%= msg %></li> 
+         <% end %>
+      </ul>
+    </div> 
+  <% end %>
+
+  <div class="fields">
+    <%= f.label :socid %>
+    <%= f.text_field :socid %>
+    <%= f.hidden_field(:soctype, :value => soctype) %>
+  </div> 
+
+  <div class="submit">
+    <%= f.submit 'Find' %>
+  </div>
+
+<% end %>

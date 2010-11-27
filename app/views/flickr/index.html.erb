@@ -1,0 +1,8 @@
+<% content_for :title, 'Find your flickr id' %>
+<% content_for :title_h1, 'Find your flickr user or group id' %>
+
+<%= render :partial => 'shared/menu', :locals => { :menu_current => 'flickr' }  %>
+<%= render :partial => 'shared/form', :locals => { :entry => @entry, :soctype => 'flickr' } %>
+<div id="resultdiv">
+	<%= image_tag "loader.gif", :id => "loader_img" %>
+</div>

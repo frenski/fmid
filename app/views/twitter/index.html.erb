@@ -1,0 +1,8 @@
+<% content_for :title, 'Find your Twitter id' %>
+<% content_for :title_h1, 'Find your Twitter account id' %>
+
+<%= render :partial => 'shared/menu', :locals => { :menu_current => 'twitter' }  %>
+<%= render :partial => 'shared/form', :locals => { :entry => @entry, :soctype => 'twitter' } %>
+<div id="resultdiv">
+	<%= image_tag "loader.gif", :id => "loader_img" %>
+</div>

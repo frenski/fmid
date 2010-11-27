@@ -1,0 +1,8 @@
+<% content_for :title, 'Find your facebook id' %>
+<% content_for :title_h1, 'Find your facebook profile/page id' %>
+
+<%= render :partial => 'shared/menu', :locals => { :menu_current => 'facebook' }  %>
+<%= render :partial => 'shared/form', :locals => { :entry => @entry, :soctype => 'facebook' } %>
+<div id="resultdiv">
+	<%= image_tag "loader.gif", :id => "loader_img" %>
+</div>

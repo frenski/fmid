@@ -1,0 +1,145 @@
+@font-face {
+    font-family: League;
+    src: url(League-Gothic.otf);
+    font-weight:100;
+}
+
+html{
+	background: #000 url('../images/back.jpg') repeat;
+	padding:0;
+}
+
+body{
+	margin:0;
+	font-family: Helvetica, Arial;
+}
+
+header{
+	display:block;
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3), transparent);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.3)), color-stop(1, transparent));
+	background-repeat: repeat-x;
+}
+
+section{
+	display:block;
+	margin:auto;
+	width: 540px;
+}
+
+h1{
+	padding:80px 0 20px 0;
+	margin:auto;
+	width: 530px;
+	text-transform:uppercase;
+	font-family: League;
+	font-size:42px;
+	color:#fff;
+	text-shadow:2px 2px 3px #000000;
+}
+
+label{
+	display:none;
+}
+
+input, .fields, .submit{
+	display: inline;
+}
+
+input{
+	border:1px solid #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 4px 6px;
+}
+
+img{
+	border:0;
+}
+
+#resultdiv{
+	margin-top:20px;
+	color:#fff;
+	font-style:italic;
+	text-shadow: 0 1px 1px #202020;
+}
+
+#loader_img{
+	display:none;
+}
+
+ul#menu{
+	margin:0;
+	padding:0;
+	height:160px;
+	position:relative;
+	list-style:none;
+}
+
+ul#menu li{
+	position:relative;
+	margin-right:15px;
+	float:left;
+}
+
+#entry_submit{
+	border:none;
+	padding: 5px 10px;
+	text-shadow: 0px 1px 0px #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#bdbdbd), to(#e4e4e4));
+	background: -moz-linear-gradient(top,  #bdbdbd,  #e4e4e4);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdbdbd', endColorstr='#e4e4e4');
+}
+
+#entry_submit:hover{
+	text-shadow: 1px 1px 2px #555;
+	background: -webkit-gradient(linear, left top, left bottom, from(#999), to(#ccc));
+	background: -moz-linear-gradient(top,  #999,  #ccc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#999', endColorstr='#ccc');
+}
+
+#entry_socid{
+	width:430px;
+	margin-top:5px;
+}
+
+.nav_img1{
+	z-index:1;
+	margin:1px 0 0 2px;
+}
+
+.nav_img2{
+	z-index:10;
+	left:0;
+	top:0;
+	position:absolute;
+	display:none;
+	padding:0;
+	margin:0;
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	#entry_socid{
+		width:250px;
+	}
+	h1{
+		width:350px;
+		padding-top:20px;
+	}
+	section{
+		width:350px;
+	}
+	form{
+		clear:both;
+	}
+	.fields, .submit{
+		display:block;
+		float:left;
+		margin-right:5px;
+	}
+	ul{
+		display:block;
+	}
+}
